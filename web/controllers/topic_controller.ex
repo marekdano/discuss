@@ -9,6 +9,6 @@ defmodule Discuss.TopicController do
 		# changeset = Topic.changeset(struct, params)
 		changeset = Topic.changeset(%Topic{}, %{})
 
-		render conn, "new.html"
+		render conn, "new.html", changeset: changeset
 	end
 end
