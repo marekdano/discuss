@@ -11,10 +11,10 @@ defmodule Discuss.CommentsChannel do
 		{:ok, %{}, socket}
 	end
 
-	def handle_in(name, message, socket) do
+	def handle_in(name, %{"content" => content}, socket) do
 		IO.puts("+++++++")
 		IO.puts(name)
-		IO.inspect(message)
+		IO.inspect(content)
 
 		{:reply, :ok, socket}
 	end
